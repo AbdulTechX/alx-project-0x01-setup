@@ -1,8 +1,8 @@
-import { UsercardProps } from "@/interfaces";
+import { UsersProps } from "@/interfaces";
 
 
 
-const UserCard: React.FC<UsercardProps> = ({welcome}) => {
+const UserCard: React.FC<UsersProps> = ({welcome}) => {
     return (
         <div className="max-w-xl mx-auto my-6 p-6 bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
             <div>

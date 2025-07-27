@@ -33,7 +33,7 @@ export interface Company {
     catchPhrase: string;
     bs:          string;
 }
-export interface UsersPageProps  {
+export interface UsersProps  {
     posts: Welcome[];
 }
 export interface PostData {
