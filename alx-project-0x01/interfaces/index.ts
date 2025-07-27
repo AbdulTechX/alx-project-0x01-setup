@@ -34,7 +34,7 @@ export interface Company {
     bs:          string;
 }
 export interface UsersPageProps  {
-    users: Welcome[];
+    posts: Welcome[];
 }
 export interface PostData {
     userId: number;

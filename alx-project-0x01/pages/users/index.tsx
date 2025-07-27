@@ -4,15 +4,15 @@ import {  UsersPageProps } from "@/interfaces";
 
 
 
-const usersPage: React.FC<UsersPageProps> = ({ users }) => {
+const Users: React.FC<UsersPageProps> = ({ posts }) => {
     return (
         <div className="flex flex-col h-screen">
             <Header />
             <main className="p-4">
                 <div>
                     <h1 className="text-2xl font-bold mb-4">User Profile</h1>
-                    {users.map((user, idx) => (
-                        <UserCard key={user.id || idx} welcome={user} />
+                    {posts.map((post, idx) => (
+                        <UserCard key={post.id || idx} welcome={post} />
                     ))}                  
                 </div>
             </main>
@@ -20,15 +20,15 @@ const usersPage: React.FC<UsersPageProps> = ({ users }) => {
         </div>
     );
 };
-export default usersPage;
+export default Users;
 
 export async function getStaticProps() {
     const response = await fetch("https://jsonplaceholder.typicode.com/users");
-    const users = await response.json();
+    const posts = await response.json();
 
     return {
         props: {
-            users,
+            posts,
         }
     }
 }
