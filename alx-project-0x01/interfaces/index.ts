@@ -33,8 +33,8 @@ export interface Company {
     catchPhrase: string;
     bs:          string;
 }
-export interface UsercardProps {
-    welcome: Welcome;
+export interface UsersPageProps  {
+    users: Welcome[];
 }
 export interface PostData {
     userId: number;
