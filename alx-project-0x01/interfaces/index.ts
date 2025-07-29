@@ -34,7 +34,7 @@ export interface Company {
     bs:          string;
 }
 export interface UsersProps  {
-    posts: Welcome[];
+    posts: UserData[];
 }
 export interface PostData {
     userId: number;
@@ -45,4 +45,31 @@ export interface PostData {
 export interface PostModalProps {
     onClose: () => void;
     onSubmit: (post: PostData) => void;
+}
+export interface UserData {
+    id: number;
+    name: string;
+    email: string;
+    username: string;
+    phone?: string;
+    website?: string;
+    address?: {
+        street: string;
+        suite: string;
+        city: string;
+        zipcode: string;
+        geo?: {
+            lat: string;
+            lng: string;
+        };
+    };
+    company?: {
+        name: string;
+        catchPhrase: string;
+        bs: string;
+    }
+}
+export interface UserModalProps {
+    onClose: () => void;
+    onSubmit: (newUser: UserData) => void;
 }
